@@ -2,7 +2,7 @@
     /* Cada expresionen PHP tiene uno de llos siguientes tipos incorporados dependiendo de su valor:
     null    bool    int     float   string  array   object  callable    resource*/
 
-    $a_bool = true;
+    $a_bool = true; 
     $a_str = "foo";
     $a_str2 = "foo";
     $an_int = 12;

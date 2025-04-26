@@ -3,7 +3,6 @@
 
 ?>
 
-
 <?php if ($expresion == true): ?>
     Esto mostrara si la expresion es verdadera
 <?php else: ?>
