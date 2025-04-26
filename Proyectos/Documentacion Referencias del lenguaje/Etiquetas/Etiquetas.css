@@ -1,3 +1,15 @@
 .caja {
     padding: 20px;
 }
+
+.teoria {
+    display: flex;
+}
+
+.teoria__section{
+    padding: 20px;
+}
+
+.teoria__aside {
+    padding-top: 12px;
+}

@@ -10,15 +10,34 @@
     </head>
 
     <body>
-        <div class="titulo"><h1>PHP</h1></div>
-        <div class="caja">
-            <h2>Etiquetas de PHP</h2>
-            <br>
-            <p>
-                Cuando PHP analiza un fichero, busca las etiquetas de apertura y cierre, que son y , y que indican a PHP dónde empezar y finalizar la interpretación del código. El contenido fuera de estas etiquetas será ignorado por el analizador de PHP, lo que permite que PHP se embeba en varios tipos de documentos. <br><br>
-                Un carácter de espacio en blanco (espacio, tabulación o nueva línea) debe seguir a php para garantizar una separación adecuada de los tokens. Omitir este espacio en blanco resultará en un error de sintaxis. <br><br>
-                PHP también incluye la etiqueta corta de <? , que es una abreviatura de .
-            </p>
+        <div class="teoria">
+            <section class="teoria__section">
+                <div class="caja">
+                    <h2>Etiquetas de PHP</h2>
+                    <br>
+                    <p>
+                        Cuando PHP analiza un fichero, busca las etiquetas de apertura y cierre, que son y , y que indican a PHP dónde empezar y finalizar la interpretación del código. El contenido fuera de estas etiquetas será ignorado por el analizador de PHP, lo que permite que PHP se embeba en varios tipos de documentos. <br><br>
+                        Un carácter de espacio en blanco (espacio, tabulación o nueva línea) debe seguir a php para garantizar una separación adecuada de los tokens. Omitir este espacio en blanco resultará en un error de sintaxis. <br><br>
+                        PHP también incluye la etiqueta corta de <code>&lt;?=</code>, que es 
+                        es una abreviatura de <code>&lt;?php</code> echo.
+                    </p><br>
+                    <strong>
+                        Ejemplo #1 Etiquetas de apertura y cierre en PHP
+                    </strong>
+                    <code><span style="color: #000000">1.  <span style="color: #0000BB">&lt;?php </span><span style="color: #007700">echo </span><span style="color: #DD0000">'si quieres servir código PHP en documentos XHTML o XML,<br> 
+                    utiliza estas etiquetas'</span><span style="color: #007700">; </span><span style="color: #0000BB">?&gt;<br></span><br>2.  Puedes utilizar la etiqueta corta de echo para <span style="color: #0000BB">&lt;?= </span><span style="color: #DD0000">'imprimir esta cadena' 
+                    </span><span style="color: #0000BB">?&gt;</span>.<br>    Es equivalente a <span style="color: #0000BB">&lt;?php </span><span style="color: #007700">echo </span><span style="color: #DD0000">'imprimir esta cadena' </span><span style="color: #0000BB">?&gt;</span>.<br><br>3.  &lt;? echo 'este código está 
+                    dentro de etiquetas cortas, pero solo funcionará '.<br>            'si está habilitado short_open_tag'; ?&gt;</span></code>
+                </div>
+            </section>
+            <aside class="teoria__aside">
+                <ul>
+                    <li><a href="">Sintaxís básicas</a></li>
+                    <li><a href="">Etiquetas PHP</a></li>
+                    <li><a href="">Separación de instrucciones</a></li>
+                    <li><a href="">Comentarios</a></li>
+                </ul>
+            </aside>
         </div>
     </body>
 
