@@ -4,8 +4,8 @@
     $index = 0;
 ?>
 
-<?= while ($index <= sizeof($my_array) - 1) : ?>
-    <li></li>
+<?= while ($index <= sizeof($my_array) - 1): ?>
+    <li>Hola</li>
 <?= endwhile;?>
 
 <style>
