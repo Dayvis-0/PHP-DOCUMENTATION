@@ -31,7 +31,7 @@
 ?>
 
 <h2>Ámbito de una variable</h2>
-<p><strong>¿Que es el ámbito de una variable?</strong> br
+<p><strong>¿Que es el ámbito de una variable?</strong> <br>
 El ámbito de una variable es el contexto en el cual la variable está definida. PHP tiene un ámbito de función  y un ámbito
 global. Cualquier variable definida fuera de una funcion está limitada al ámbito global. Cuando se incluye
 un archivo, el código contenido heredea el ámbito de la variable de la linea en el cual se incluye el archivo
@@ -65,8 +65,8 @@ como si se hubieran definido dentro de la función que realiza la llamada.</p>
 <style>
     :root {
         background: radial-gradient(circle, #fff, #bbb);
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 300px;
+        padding-right: 300px;
     }
     h2 {
         text-align: center;

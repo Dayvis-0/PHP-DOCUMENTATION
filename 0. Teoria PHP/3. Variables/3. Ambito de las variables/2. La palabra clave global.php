@@ -62,7 +62,7 @@
 ?>
 
 <h4>Nota</h4>
-<p>Utilizar una clave <code>global</code> fuera de una función no es un error. Esta puede se <br>
+<p>Utilizar una clave <code>global</code> fuera de una función no es un error. Esta puede se
 utilizada aun si el fichero esta incluido desde el interior de una funcion</p>
 
 <?php 
@@ -74,7 +74,7 @@ utilizada aun si el fichero esta incluido desde el interior de una funcion</p>
     }
 
     cargarArchivo();
-    echo "La \$x desde d: ", $x; // Muestra 100
+    echo "La \$x desde d.php: ", $x; // Muestra 100
 
 ?>
 
@@ -113,8 +113,8 @@ utilizada aun si el fichero esta incluido desde el interior de una funcion</p>
 <style>
     :root {
         background: radial-gradient(circle, #fff, #bbb);
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 300px;
+        padding-right: 300px;
     }
     h3 {
         text-align: center;
