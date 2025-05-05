@@ -26,13 +26,34 @@
     function foo() {
         static $int = 0;
         static $int_1 = 1+2; 
-        static $int_2 = sqrt(121);
+        //static $int_2 = sqrt(121);
+        static $int_2 = 2;
 
         $int++;
         $int_1++;
         $int_2++;
         echo $int, "\n",$int_1, "\n", $int_2;
     }
+    // Ejemplo 10: variables en funciones anonimas
+    function exampFunct($input) {
+        $result = (static function () use ($input) {
+            static $counter = 0; // La variabl estatica no retendra su valor 
+            $counter++;
+            return "Entrada: $input, Contador: $counter <br>";
+        });
+
+        return $result();
+    }
+    // Ejemlo 11: variable estatica en metodos heredados
+    class Foo {
+        public static function counter() {
+            static $counter = 0;
+            $counter++;
+            return $counter; 
+        }
+    }
+
+    class Bar extends Foo {}
 ?>
 
 <h2 class="text">Uso de variables <code>static</code></h2>
@@ -60,6 +81,21 @@ programa abandona este ámbito</p>
     de nuevo solo imprimiria una vaz,ya que se quedaria con el numero que no cumple la condicion, lo muestra y termina</p>";
     echo "<h4>Ejemplo #9: Declarando variables estáticas</h4>";
     foo();
+    echo "<h4>Ejemplo #10: Variables estáticas en funciones anonimas</h4>";
+    echo exampFunct('A');
+    echo exampFunct('B');
+    echo "<p>Como se puede ver los retorno de las funciones se reinicializa. Las variables estaticas dentro de funciones 
+    anonimas tambien persisten solo dentro de esa instancia especifica de la funcion. Si la funcion anonima es recreada
+    en cada llamada, la variable estatica sera reinicializada.</p>";
+    echo "<h4>Ejemplo #11: Uso de variables estáticas en métodos heredados</h4>";
+    echo "Desde clase Foo: ",var_dump(Foo::counter()), "<br>";
+    echo "Desde clase Foo: ",var_dump(Foo::counter()), "<br>";
+    echo "Desde clase Bar: ",var_dump(Bar::counter()), "<br>";
+    echo "Desde clase Bar: ",var_dump(Bar::counter()), "<br>";
+    echo "<p>Como se puede ver la clase hija que hereda el metodo sigue la secuencia esto es porque, partir de PHP 8.1.0,
+    cuando un metodo que usa variables estaticas es heredado (pero no soobreescrito), el metodo heredado compartira ahora
+    las variables estticas con el metodo padre. Esto significa que las variables estticas en los metodos ahora se comportan
+    de la misma manera que las propiedades estaticas.</p>";
 ?>
 
 <style>
